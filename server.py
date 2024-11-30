@@ -7,7 +7,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print("Socket connected")
 
 # hosting it on this machine
-s.bind(("192.168.1.168", 8080))
+s.bind(("44.233.151.27", 8080))
 print("Server host name ", socket.gethostname())
 # queue of 5 clients 
 s.listen(5)
