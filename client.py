@@ -3,7 +3,7 @@ import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # connect to public ip like singhrasp.ddnsgeek.com and give port number
-s.connect(("192.168.1.210", 8080))
+s.connect(("35.160.120.126", 8080))
 print("Client host name ", socket.gethostname())
 
 inputs = "";
