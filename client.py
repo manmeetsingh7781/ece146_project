@@ -13,8 +13,8 @@ window.resizable(False, False)
 chat = scrolledtext.ScrolledText(window, width=150, height=20)
 chat.config(state="disabled")
 
-# allow multiple messages to send 
-def recieve():
+# allow multiple messages to receive
+def receive():
     msg = ""
     while True:
         try:
@@ -32,7 +32,7 @@ def recieve():
             insert_text(f"Error: {e}")
             break
 
-
+# sending a message
 def send():
     input_msg = input_text_box.get("1.0", tk.END).strip() 
     try:
@@ -97,8 +97,8 @@ except Exception as e:
     insert_text(f"Error: {e}")
 
 
-thread_reciever = threading.Thread(target=recieve, daemon=True)
-thread_reciever.start()
+thread_receiver = threading.Thread(target=receive, daemon=True)
+thread_receiver.start()
 window.mainloop()
 
 # close the connection
