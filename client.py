@@ -22,6 +22,7 @@ def recieve():
             if not msg:
                 print("Server disconnected")
                 insert_text("Server disconnected")
+                break
             else:
                 print(f"Server: {msg}")
                 # print("Enter a message to send: ")
@@ -29,6 +30,7 @@ def recieve():
         except Exception as e:
             print("Error: ", e)
             insert_text(f"Error: {e}")
+            break
 
 
 def send():
