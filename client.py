@@ -73,14 +73,14 @@ input_text_box.place(x=0, y=450)
 input_text_box.bind("<Return>", lambda event: send())
 
 send_button = tk.Button(window, text="Send", command=send, height=2)
-send_button.place(x=450, y=450)
+send_button.place(x=430, y=445)
 
 exit_button = tk.Button(window, text="Exit", command=lambda: {
     s.send("quit".encode()),
     window.destroy(),
     s.close()
 }, height=2)
-exit_button.place(x=450, y=0)
+exit_button.place(x=420, y=0)
 
 
 chat.pack()
